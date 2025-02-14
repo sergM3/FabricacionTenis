@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'tenis/piezas', to: 'tenis#piezas'
+  get 'tenis/ensamblaje', to: 'tenis#ensamblaje'
+  resources :tenis, only: [:index, :show]
 end
